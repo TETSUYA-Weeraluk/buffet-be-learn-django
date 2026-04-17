@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
     # app
     "api.core",
+    "api.branch",
     "api.customers",
     "api.orders",
     "api.tables",
