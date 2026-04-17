@@ -10,4 +10,4 @@ class TableStatus(models.TextChoices):
 class Table(BaseModel):
     name = models.CharField(max_length=255)
     status = models.CharField(max_length=255, choices=TableStatus.choices, default=TableStatus.AVAILABLE)
-    branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
+    branch = models.ForeignKey(Branch, on_delete=models.CASCADE, related_name="tables")
